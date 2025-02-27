@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+
+html{
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    color: white;
+    background-color: black;
+    font-family: "Tektur", serif;
+    list-style: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding: 10px 20px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    padding-right: 2rem;
+}
+
+header h1 {
+    margin: 0;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    margin-left: 1.5rem;
+}
+
+/* Stijl voor het hamburger icoon */
+#hamburger {/* Hamburger icon zichtbaar op mobiele schermen */
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+#menu a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Verberg menu op mobiele schermen */
+#menu ul {
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+}
+
+#menu {
+    top: 50px;
+    right: 0;
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+#menu.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#hamburger {
+    transition: transform 0.3s ease-in-out;
+}
+
+#hamburger.active {
+    transform: translateX(-50px);
+}
+
+.logo-main img{
+    width: 3rem;
+    position: absolute;
+}
+
+.logo-main{
+    margin: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.intro{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 5rem;
+    border-bottom: 10px;
+    border-bottom-color: white;
+}
+
+.intro p{
+    width: 20rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.geloof{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tsm{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tsm p{
+    text-align: center;
+}
+
+
+#bewegendtekst{
+    display: flex;
+    flex-direction: column;
+}
+
+#bewegendtekst1{
+    margin-top: auto;
+}
+
+.vissen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: 15rem;
+    margin-top: 15rem
+    
+}
+
+.vissen img{
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: row;
+}
+
+#visinnet{
+    display: flex;
+    align-items: center;
+}
+
+#visinnet img{
+    width: 40rem;
+}
+
+#vissenanders{
+    display: flex;
+    flex-direction: row;
+}
+
+.outro{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5rem;
+    margin-bottom: 15rem
+}
+
+#outro1{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+#outro2{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+#outro1 img{
+    width: 50%;
+}
+
+#outro2 img{
+    width: 50%;
+}
+
+.outro p{
+    width: 15rem;
+}
+
+
+
+
+
+
+footer ul {
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: center;
+    margin-right: 3rem;
+}
+
+footer a i{
+    color: white;
+    font-size: 2rem;
+}
+
+footer p{
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    header {
+        padding: 15px 30px;
+    }
+
+    #hamburger {
+        display: none; /* Verbergt de hamburger op grotere schermen */
+    }
+
+    #menu {
+        display: flex !important;
+        opacity: 100;
+        margin-right: 10rem; /* Zorgt ervoor dat het menu altijd zichtbaar is */
+    }
+
+    #menu ul {
+        flex-direction: row; /* Zet de navigatie naast elkaar */
+    }
+
+    .intro p, .outro p {
+        width: 30rem;
+    }
+
+    .vissen img {
+        width: 50%;
+    }
+
+    #outro1, #outro2 {
+        gap: 3rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+
+    main {
+        width: 80%;
+        margin: auto;
+    }
+
+    .logo-main img {
+        width: 5rem;
+    }
+
+    .intro, .geloof, .tsm, .outro {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .intro{
+        display: flex;
+        justify-content: center;
+    }
+
+    .geloof, .outro {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        gap: 4rem;
+    }
+
+    .tsm{
+        width: 50rem;
+    }
+
+    .intro{
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        margin: 10rem;
+    }
+
+    
+
+    .intro img, .outro img {
+        width: 30rem;
+    }
+
+    .intro p, .outro p {
+        width: 35rem;
+    }
+
+    #visinnet img {
+        width: 50rem;
+    }
+
+    #vissenanders {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    footer {
+        text-align: center;
+        padding: 2rem;
+    }
+
+    footer ul {
+        justify-content: center;
+        gap: 20px;
+    }
+}
